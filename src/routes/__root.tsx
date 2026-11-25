@@ -86,10 +86,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Mohini Creation: custom designer suits, blouses, lehengas aur bridal outfits, aapke naap se.",
+          "Mohini Creation: custom designer suits, blouses, lehengas, and bridal outfits tailored to your measurements.",
       },
       { property: "og:title", content: "Mohini Creation" },
-      { property: "og:description", content: "Custom designer stitching, aapke naap se." },
+      {
+        property: "og:description",
+        content: "Custom designer stitching tailored to your measurements.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

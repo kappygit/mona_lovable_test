@@ -9,13 +9,13 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Designer blouses, bridal & festive lehengas, Alia-cut suits, kids custom outfits aur alterations — Mohini Creation ki services.",
+          "Designer blouses, bridal & festive lehengas, Alia-cut suits, kids custom outfits, and alterations by Mohini Creation.",
       },
       { property: "og:title", content: "Services — Mohini Creation" },
       {
         property: "og:description",
         content:
-          "Custom stitching, bridal blouses, lehengas, suits aur kids ethnic wear — Mohini Creation ki services.",
+          "Custom stitching, bridal blouses, lehengas, suits, and kids ethnic wear by Mohini Creation.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -28,8 +28,8 @@ function Services() {
   return (
     <>
       <PageHeader
-        title="Hum kya banate hain"
-        text="Prices aapke design, embroidery work aur fabric ke hisaab se seedha designer confirm karti hai."
+        title="What we craft"
+        text="Pricing is confirmed directly by the designer based on your design, embroidery work, and fabric."
       />
       <div className="mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
@@ -52,11 +52,11 @@ function Services() {
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <Link to="/enquiry" search={{ service: s.name }} className="btn-primary">
-                  Enquiry karein
+                  Enquire now
                 </Link>
                 {s.category && (
                   <Link to="/gallery" search={{ category: s.category }} className="btn-outline">
-                    Designs dekhein
+                    View designs
                   </Link>
                 )}
               </div>

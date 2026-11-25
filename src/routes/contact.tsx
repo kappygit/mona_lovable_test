@@ -9,12 +9,12 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — Mohini Creation" },
       {
         name: "description",
-        content: "WhatsApp ya Instagram par Mohini Creation se sampark karein.",
+        content: "Get in touch with Mohini Creation on WhatsApp or Instagram.",
       },
       { property: "og:title", content: "Contact — Mohini Creation" },
       {
         property: "og:description",
-        content: "WhatsApp ya Instagram par Mohini Creation se sampark karein.",
+        content: "Get in touch with Mohini Creation on WhatsApp or Instagram.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,11 +32,15 @@ function Contact() {
   ].filter(([, v]) => v);
   return (
     <>
-      <PageHeader eyebrow="Contact" title="Baat karein" text="WhatsApp sabse aasaan tareeka hai." />
+      <PageHeader
+        eyebrow="Contact"
+        title="Get in touch"
+        text="WhatsApp is the fastest way to reach us."
+      />
       <div className="mx-auto max-w-2xl px-4">
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
-            href={whatsappLink("Namaste Mohini Creation!")}
+            href={whatsappLink("Hello Mohini Creation!")}
             target="_blank"
             rel="noreferrer"
             className="btn-primary"
@@ -57,7 +61,7 @@ function Contact() {
           ))}
         </dl>
         <p className="mt-6 text-sm text-muted-foreground">
-          Final availability aur order details seedha designer ke saath confirm hoti hain.
+          Final availability and order details are confirmed directly with the designer.
         </p>
       </div>
     </>

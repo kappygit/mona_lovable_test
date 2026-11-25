@@ -17,13 +17,13 @@ export const Route = createFileRoute("/gallery")({
       {
         name: "description",
         content:
-          "Mohini Creation (@mohini_creation15) ke real bridal blouses, lehengas, Alia-cut suits aur kids outfits.",
+          "Real bridal blouses, festive lehengas, Alia-cut suits, and kids outfits from Mohini Creation (@mohini_creation15).",
       },
       { property: "og:title", content: "Design Gallery — Mohini Creation" },
       {
         property: "og:description",
         content:
-          "Mohini Creation (@mohini_creation15) ke real stitched outfits aur Instagram Reels showcase.",
+          "Custom stitched outfits and Instagram Reels showcase from Mohini Creation (@mohini_creation15).",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -62,7 +62,7 @@ function Gallery() {
     <>
       <PageHeader
         title="Design Gallery"
-        text={`Signature lookbook aur @${site.instagramHandle} par showcase kiye gaye real bridal blouses, festive lehengas, Alia-cut suits aur kids sets.`}
+        text={`Signature lookbook pieces and real bridal blouses, festive lehengas, Alia-cut suits, and kids sets featured on @${site.instagramHandle}.`}
       />
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -105,7 +105,7 @@ function Gallery() {
           <div className="flex flex-wrap items-center gap-2">
             {(
               [
-                { id: "all", label: "Sab" },
+                { id: "all", label: "All" },
                 { id: "reel", label: "IG Reels" },
                 { id: "post", label: "IG Posts" },
                 { id: "studio", label: "Lookbook" },
@@ -138,7 +138,7 @@ function Gallery() {
 
         {items.length === 0 && (
           <div className="mt-10 rounded-xl border border-dashed border-border bg-card p-8 text-center text-sm text-muted-foreground">
-            Is filter mein abhi koi item nahi mila —{" "}
+            No designs match this filter yet —{" "}
             <button
               type="button"
               onClick={() => {
@@ -147,7 +147,7 @@ function Gallery() {
               }}
               className="font-medium text-primary underline"
             >
-              Sab designs dekhein
+              View all designs
             </button>
             .
           </div>
@@ -156,11 +156,11 @@ function Gallery() {
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-secondary p-6">
           <div>
             <p className="font-display text-2xl font-semibold">
-              Naye designs aur Reels roz update hote hain
+              New designs and Reels are added regularly
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Instagram par @{site.instagramHandle} follow karein ya kisi bhi outfit ka screenshot
-              WhatsApp par bhejein.
+              Follow @{site.instagramHandle} on Instagram or send any outfit screenshot directly on
+              WhatsApp.
             </p>
           </div>
           <a
@@ -169,7 +169,8 @@ function Gallery() {
             rel="noreferrer"
             className="btn-outline bg-background"
           >
-            <Instagram className="h-4 w-4" />@{site.instagramHandle} par dekhein
+            <Instagram className="h-4 w-4" />
+            View @{site.instagramHandle}
           </a>
         </div>
       </div>

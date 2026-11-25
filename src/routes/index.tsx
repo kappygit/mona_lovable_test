@@ -12,13 +12,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Custom suits, bridal blouses, lehengas, Alia-cut outfits aur kids wear. Designs dekhein aur WhatsApp par enquiry karein.",
+          "Custom suits, bridal blouses, lehengas, Alia-cut outfits, and kids wear. Explore designs and enquire on WhatsApp.",
       },
-      { property: "og:title", content: "Mohini Creation — Aapke naap se designer outfits" },
+      { property: "og:title", content: "Mohini Creation — Designer outfits tailored to your fit" },
       {
         property: "og:description",
         content:
-          "Custom suits, blouses, lehengas aur bridal outfits. Designs dekhein aur WhatsApp par enquiry karein.",
+          "Custom suits, blouses, lehengas, and bridal outfits. Explore designs and enquire on WhatsApp.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -67,24 +67,24 @@ function Home() {
             <span className="text-muted-foreground">· @{site.instagramHandle}</span>
           </a>
           <h1 className="mt-4 max-w-lg font-display text-5xl leading-[1.03] font-semibold md:text-7xl">
-            Aapke style ke liye, aapke naap se.
+            Styled for you, tailored to fit.
           </h1>
           <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
             {site.intro}
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link to="/gallery" className="btn-primary">
-              Designs dekhein
+              View Designs
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href={whatsappLink("Namaste, mujhe custom outfit ke baare mein poochhna hai.")}
+              href={whatsappLink("Hello, I would like to enquire about a custom outfit.")}
               target="_blank"
               rel="noreferrer"
               className="btn-outline"
             >
               <MessageCircle className="h-4 w-4" />
-              WhatsApp par poochhein
+              Ask on WhatsApp
             </a>
           </div>
           <dl className="mt-8 grid max-w-md grid-cols-3 gap-4 border-t border-border pt-5 text-sm">
@@ -125,14 +125,14 @@ function Home() {
           <div>
             <h2 className="font-display text-3xl font-semibold md:text-4xl">Featured lookbook</h2>
             <p className="mt-1.5 text-sm text-muted-foreground">
-              Signature studio pieces — click karke bada dekhein.
+              Signature studio pieces — tap any outfit to inspect closely.
             </p>
           </div>
           <Link
             to="/gallery"
             className="text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
-            Sab dekhein
+            View all
           </Link>
         </div>
         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
@@ -155,8 +155,8 @@ function Home() {
                 Instagram Showcase · @{site.instagramHandle}
               </h2>
               <p className="mt-2 max-w-xl text-sm text-muted-foreground md:text-base">
-                {site.signature} ke asli Instagram Reels aur stitched outfits — bridal blouses,
-                twirl lehengas, Alia-cut suits aur kids sets.
+                Real Instagram Reels and custom stitched outfits by {site.signature} — bridal
+                blouses, twirl lehengas, Alia-cut suits, and kids sets.
               </p>
             </div>
             <a
@@ -166,7 +166,7 @@ function Home() {
               className="btn-outline bg-background"
             >
               <Instagram className="h-4 w-4" />
-              Instagram par dekhein
+              View on Instagram
               <ExternalLink className="h-3.5 w-3.5 opacity-70" />
             </a>
           </div>
@@ -174,7 +174,7 @@ function Home() {
           <div className="mt-6 flex flex-wrap items-center gap-2">
             {(
               [
-                { id: "all", label: `Sab Creations (${instagramItems.length})` },
+                { id: "all", label: `All Creations (${instagramItems.length})` },
                 {
                   id: "reel",
                   label: `Reels (${instagramItems.filter((i) => i.source === "reel").length})`,
@@ -216,11 +216,9 @@ function Home() {
       <section className="mx-auto max-w-6xl px-4 pt-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="font-display text-3xl font-semibold md:text-4xl">
-              Category ke hisaab se dekhein
-            </h2>
+            <h2 className="font-display text-3xl font-semibold md:text-4xl">Browse by category</h2>
             <p className="mt-1.5 text-sm text-muted-foreground">
-              Lookbook aur Instagram dono ke designs ek saath browse karein.
+              Explore both studio lookbook and Instagram creations together.
             </p>
           </div>
           <Link
@@ -228,7 +226,7 @@ function Home() {
             search={activeCategory === "All" ? {} : { category: activeCategory }}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
-            Poori gallery ({gallery.length})
+            Full gallery ({gallery.length})
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -283,7 +281,7 @@ function Home() {
             to="/services"
             className="text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
-            Sab services
+            All services
           </Link>
         </div>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -311,7 +309,7 @@ function Home() {
                     search={{ service: s.name }}
                     className="text-sm font-medium text-primary hover:underline"
                   >
-                    Enquiry karein
+                    Enquire now
                   </Link>
                   {s.category && (
                     <Link
@@ -319,7 +317,7 @@ function Home() {
                       search={{ category: s.category }}
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      {s.category} dekhein
+                      View {s.category}
                     </Link>
                   )}
                 </div>
@@ -338,7 +336,7 @@ function Home() {
           vertical
         />
         <div>
-          <h2 className="font-display text-3xl font-semibold md:text-4xl">Order kaise karein</h2>
+          <h2 className="font-display text-3xl font-semibold md:text-4xl">How to order</h2>
           <ol className="mt-6 space-y-5">
             {orderSteps.map((s, i) => (
               <li key={s.title} className="flex gap-4">
@@ -354,11 +352,11 @@ function Home() {
           </ol>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/enquiry" search={{}} className="btn-primary">
-              Order Enquiry bhejein
+              Send Order Enquiry
             </Link>
             <a href={site.instagramUrl} target="_blank" rel="noreferrer" className="btn-outline">
               <Instagram className="h-4 w-4" />
-              Instagram par follow karein
+              Follow on Instagram
             </a>
           </div>
         </div>

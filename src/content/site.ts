@@ -13,7 +13,7 @@ export const site = {
   signature: "Creation By Mohini",
   tagline: "Custom designer stitching",
   intro:
-    "Har outfit aapke naap, aapke occasion aur aapki pasand ke hisaab se design aur stitch kiya jaata hai.",
+    "Every outfit is custom designed and stitched to match your measurements, occasion, and personal style.",
   whatsappNumber: "917878096752", // digits only, with country code
   instagramHandle: "mohini_creation15",
   instagramUrl: "https://www.instagram.com/mohini_creation15/",
@@ -82,7 +82,7 @@ export const gallery: GalleryItem[] = [
     title: "Rose Anarkali",
     category: "Suits & Kurtis",
     description:
-      "Zari embroidery ke saath floor-length rose anarkali — custom naap aur flowy silhouette.",
+      "Floor-length rose anarkali with zari embroidery, tailored measurements, and a flowing silhouette.",
     highlights: ["Zari embroidery", "Floor-length flare"],
     featured: true,
     width: 1024,
@@ -95,7 +95,7 @@ export const gallery: GalleryItem[] = [
     src: lookbook.suit,
     title: "Mint Cotton Suit",
     category: "Suits & Kurtis",
-    description: "Halki thread work aur neat finishing wala daily-wear cotton suit.",
+    description: "Daily-wear cotton suit featuring delicate thread work and clean tailoring.",
     highlights: ["Breathable cotton", "Fine thread work"],
     featured: true,
     width: 1024,
@@ -108,7 +108,7 @@ export const gallery: GalleryItem[] = [
     src: lookbook.blouse,
     title: "Maroon Zari Blouse",
     category: "Blouses",
-    description: "Back par zari design aur precision tailoring wala silk designer blouse.",
+    description: "Tailored silk designer blouse with intricate zari detailing along the back.",
     highlights: ["Silk zari back", "Tailored fit"],
     featured: true,
     width: 1024,
@@ -121,7 +121,8 @@ export const gallery: GalleryItem[] = [
     src: lookbook.lehenga,
     title: "Terracotta Lehenga",
     category: "Lehengas",
-    description: "Flowing gher aur rich festive fall wala custom-stitched lehenga.",
+    description:
+      "Custom-stitched festive lehenga crafted with generous flare and a structured drape.",
     highlights: ["Flowing gher", "Festive drape"],
     featured: true,
     width: 1024,
@@ -134,7 +135,8 @@ export const gallery: GalleryItem[] = [
     src: lookbook.bridal,
     title: "Red Bridal Lehenga",
     category: "Bridal",
-    description: "Heavy gold embroidery aur classic bridal detailing wala signature lehenga look.",
+    description:
+      "Signature bridal lehenga finished with rich gold embroidery and classic bridal detailing.",
     highlights: ["Heavy gold embroidery", "Bridal custom fit"],
     width: 1024,
     height: 1536,
@@ -146,10 +148,10 @@ export const gallery: GalleryItem[] = [
     type: "image",
     source: "reel",
     src: "/instagram/white-gold-lehenga-reel.jpg",
-    title: "Hans Jaisa Safaid — Ivory Bridal Lehenga",
+    title: "Ivory & Gold Pearl Bridal Lehenga",
     category: "Bridal",
     description:
-      "Ivory aur gold floral embroidery lehenga — handmade pearl latkan tassels aur fine gota-kinari finishing ke saath.",
+      "Ivory and gold floral embroidered lehenga finished with handmade pearl latkan tassels and fine gota-kinari edging.",
     highlights: ["Pearl latkan tassels", "Gold floral embroidery", "Custom bridal fit"],
     width: 250,
     height: 335,
@@ -162,8 +164,8 @@ export const gallery: GalleryItem[] = [
     title: "Powder Blue Floral Twirl Lehenga",
     category: "Lehengas",
     description:
-      "Flowing floral-embroidered flared lehenga — back tie-up dori choli aur full gher ke saath stitched.",
-    highlights: ["Full flare gher", "Back dori blouse", "Festive twirl look"],
+      "Flowing floral-embroidered flared lehenga paired with a back tie-up dori choli and full twirl flare.",
+    highlights: ["Full flare skirt", "Back dori blouse", "Festive twirl look"],
     width: 244,
     height: 328,
   },
@@ -175,7 +177,7 @@ export const gallery: GalleryItem[] = [
     title: "Maroon Pearl-Cutwork Bridal Blouse",
     category: "Bridal",
     description:
-      "Deep maroon bridal blouse jiske back par scalloped pearl-edging, heavy zardosi border aur beaded dori latkans hain.",
+      "Deep maroon bridal blouse featuring scalloped pearl edging along the back neckline, heavy zardosi motifs, and beaded dori latkans.",
     highlights: ["Scallop pearl border", "Heavy zardosi back", "Handmade dori latkans"],
     width: 249,
     height: 335,
@@ -188,7 +190,7 @@ export const gallery: GalleryItem[] = [
     title: "Rani Pink Net Lehenga & Gold Dupatta",
     category: "Lehengas",
     description:
-      "Bright rani-pink flare lehenga gold gota border ke saath, embroidered blouse aur ivory scalloped net dupatta.",
+      "Vibrant rani-pink flared lehenga with gold gota border, embroidered choli, and an ivory scalloped net dupatta.",
     highlights: ["Gold border flare", "Embroidered choli", "Contrast net dupatta"],
     width: 200,
     height: 294,
@@ -202,7 +204,7 @@ export const gallery: GalleryItem[] = [
     title: "Blush Pink Floral Alia-Cut Anarkali",
     category: "Suits & Kurtis",
     description:
-      "Signature Alia-cut gathered floral cotton dress — breezy day-wear silhouette aur clean tailored sleeves ke saath.",
+      "Signature Alia-cut gathered floral cotton anarkali with a breezy day-wear silhouette and tailored sleeves.",
     highlights: ["Alia-cut neckline", "Soft floral print", "Full-length flare"],
     width: 166,
     height: 286,
@@ -215,7 +217,7 @@ export const gallery: GalleryItem[] = [
     title: "Rose Pink Mirror-Work Kurta & Palazzo",
     category: "Suits & Kurtis",
     description:
-      "Rani-pink kurta aur wide white palazzo set — real mirror-work daman, hem detailing aur V-neck border ke saath.",
+      "Rani-pink kurta and wide white palazzo set finished with genuine mirror-work border detailing along the hem and neckline.",
     highlights: ["Real mirror-work border", "Wide white palazzo", "Festive suit set"],
     width: 244,
     height: 328,
@@ -228,7 +230,7 @@ export const gallery: GalleryItem[] = [
     title: "Plum Zardosi V-Back Designer Blouse",
     category: "Blouses",
     description:
-      "Rich purple blouse heavy sequin aur zardosi motifs ke saath — tailored V-back aur matching embroidered tassels.",
+      "Rich plum blouse covered in sequin and zardosi embroidery with a tailored V-back and matching embroidered tassels.",
     highlights: ["All-over zardosi & sequin", "V-back dori tie", "Custom padded option"],
     width: 245,
     height: 335,
@@ -241,7 +243,7 @@ export const gallery: GalleryItem[] = [
     title: "Purple Gota-Border Kids Co-ord & Scrunchie",
     category: "Kids Wear",
     description:
-      "Kids sleeveless kurti aur wide-leg palazzo set — silver embroidered hem, side dori aur matching scrunchie ke saath.",
+      "Kids sleeveless kurti and wide-leg palazzo set trimmed with silver gota lace, side tie-ups, and a matching scrunchie.",
     highlights: ["Silver gota border", "Comfort kids fit", "Matching scrunchie"],
     width: 224,
     height: 158,
@@ -254,7 +256,7 @@ export const gallery: GalleryItem[] = [
     title: "Lavender Shimmer Sweetheart Blouse",
     category: "Blouses",
     description:
-      "Lilac shimmer silk blouse — sweetheart back cut, beaded piping aur floral resham-sequin embroidered sleeves.",
+      "Lilac shimmer silk blouse tailored with a sweetheart back neckline, beaded piping, and floral resham-sequin sleeves.",
     highlights: ["Sweetheart back", "Embroidered sleeves", "Shimmer tissue fabric"],
     width: 249,
     height: 308,
@@ -267,7 +269,7 @@ export const gallery: GalleryItem[] = [
     title: "Teal Mirror & Zari Designer Blouse",
     category: "Blouses",
     description:
-      "Peacock-teal zari aur mirror-work blouse — scalloped back neckline, floral sleeves aur matching dori tassels.",
+      "Peacock-teal zari and mirror-work blouse crafted with a scalloped back neckline, floral sleeves, and matching dori tassels.",
     highlights: ["Scallop mirror neckline", "Teal zari weave", "Matched lehenga set"],
     width: 250,
     height: 290,
@@ -280,7 +282,7 @@ export const gallery: GalleryItem[] = [
     title: "Rani Pink Shimmer Tissue Blouse",
     category: "Blouses",
     description:
-      "Classic Creation By Mohini tailored blouse — rose-gold shimmer tissue par delicate beaded lace finishing.",
+      "Classic Creation By Mohini tailored blouse on rose-gold shimmer tissue with delicate beaded lace edging.",
     highlights: ["Beaded edge lace", "Precision princess cut", "Tissue shimmer"],
     width: 249,
     height: 289,
@@ -293,7 +295,7 @@ export const gallery: GalleryItem[] = [
     title: "Mauve Multi-Floral Embroidered Lehenga",
     category: "Lehengas",
     description:
-      "Warm mauve base par multi-color floral resham aur zari embroidery wala festive lehenga-choli set.",
+      "Warm mauve festive lehenga-choli set detailed with multi-color floral resham and zari embroidery.",
     highlights: ["Multi-floral embroidery", "Matched stitched choli", "Sangeet & mehendi pick"],
     width: 249,
     height: 335,
@@ -306,7 +308,7 @@ export const gallery: GalleryItem[] = [
     title: "Forest Green Silk Zari Lehenga",
     category: "Lehengas",
     description:
-      "Traditional forest-green brocade pattu lehenga-choli — golden woven border aur puff-sleeve blouse ke saath.",
+      "Traditional forest-green brocade pattu lehenga-choli featuring a woven golden zari border and puff-sleeve blouse.",
     highlights: ["Traditional gold zari", "Puff-sleeve blouse", "Festive silk silhouette"],
     width: 190,
     height: 256,
@@ -320,7 +322,7 @@ export const gallery: GalleryItem[] = [
     title: "Black & White Block-Print Kurta Set",
     category: "Suits & Kurtis",
     description:
-      "Handblock-inspired black cotton straight kurta aur chevron-print pant set, sleeves aur V-neck par white lace trim ke saath.",
+      "Handblock-inspired black cotton straight kurta and chevron-print trouser set with crisp white crochet lace on the sleeves and V-neck.",
     highlights: ["Breathable cotton", "White crochet lace trim", "Coordinated pant set"],
     width: 192,
     height: 250,
@@ -333,7 +335,7 @@ export const gallery: GalleryItem[] = [
     title: "Monochrome Geometric Bell-Sleeve Set",
     category: "Suits & Kurtis",
     description:
-      "All-over geometric print tailored kurta-pant co-ord — crisp contrast black piping aur flared bell sleeves ke saath.",
+      "All-over geometric print tailored kurta-pant co-ord accented with contrast black piping and flared bell sleeves.",
     highlights: ["Contrast piping neckline", "Flared bell sleeves", "Custom daily-wear fit"],
     width: 229,
     height: 294,
@@ -346,7 +348,7 @@ export const gallery: GalleryItem[] = [
     title: "Navy Daisy Bow Frock & Scrunchie",
     category: "Kids Wear",
     description:
-      "Cute navy daisy-print strap frock front pleated bow aur white piping ke saath — matching scrunchie included.",
+      "Navy daisy-print strap frock tailored with a front pleated bow, white piping trim, and a matching hair scrunchie.",
     highlights: ["Front tailored bow", "White piping edge", "Matching hair scrunchie"],
     width: 220,
     height: 240,
@@ -359,7 +361,7 @@ export const gallery: GalleryItem[] = [
     title: "Navy Foil-Dot Flared Party Frock",
     category: "Kids Wear",
     description:
-      "Sparkling navy foil-dot gathered party frock — crisp contrast neckline piping aur adjustable back bow tie ke saath.",
+      "Sparkling navy foil-dot gathered party frock finished with contrast neckline piping and an adjustable back waist bow.",
     highlights: ["Soft gathered flare", "Contrast neckline piping", "Back waist tie-bow"],
     width: 184,
     height: 256,
@@ -376,39 +378,42 @@ export type Service = {
 export const services: Service[] = [
   {
     name: "Custom Stitching",
-    description: "Aapke design idea ya reference se poora outfit naap ke saath tayaar.",
+    description:
+      "Complete outfits tailored from your own design idea or inspiration reference to your exact measurements.",
     image: lookbook.hero,
   },
   {
     name: "Blouse Stitching",
     description:
-      "Saree ya lehenga ke liye sweetheart back, pearl cutwork, dori latkans aur heavy zardosi blouses.",
+      "Custom saree and lehenga blouses featuring sweetheart backs, scalloped pearl cutwork, dori latkans, and zardosi detailing.",
     image: lookbook.blouse,
     category: "Blouses",
   },
   {
     name: "Suit Stitching",
     description:
-      "Alia-cut anarkali, mirror-work palazzo aur daily-wear cotton suits aapke fabric par.",
+      "Alia-cut anarkalis, mirror-work palazzo sets, and breathable cotton daily-wear suits from your fabric.",
     image: lookbook.suit,
     category: "Suits & Kurtis",
   },
   {
     name: "Lehenga Design",
-    description: "Occasion ke hisaab se full-gher festive aur bridal lehenga design & stitching.",
+    description:
+      "Full-flare festive and bridal lehenga design and stitching customized for your celebration.",
     image: lookbook.lehenga,
     category: "Lehengas",
   },
   {
     name: "Kids Ethnic & Frocks",
     description:
-      "Girls party frocks, festive co-ord sets aur matched scrunchies soft finishing ke saath.",
+      "Girls party frocks, festive co-ord sets, and matching scrunchies sewn with soft, comfortable finishing.",
     image: "/instagram/purple-kids-coord.jpg",
     category: "Kids Wear",
   },
   {
     name: "Alterations",
-    description: "Pehle se bane outfits, blouses ya lehengas ki precise fitting theek karna.",
+    description:
+      "Precision fitting adjustments, sleeve alterations, and finishing refinements for existing outfits.",
     image: "/instagram/studio-measuring-reel.jpg",
   },
 ];
@@ -430,19 +435,19 @@ export const measurements = [
 
 export const orderSteps = [
   {
-    title: "Design chunein",
-    text: "Lookbook ya Instagram Showcase se apna pasandida outfit chunein.",
+    title: "Choose a design",
+    text: "Pick your favorite look from our lookbook or Instagram showcase.",
   },
   {
-    title: "Enquiry bhejein",
-    text: "Form bharein ya seedha WhatsApp par design screenshot share karein.",
+    title: "Send an enquiry",
+    text: "Fill out the enquiry form or message us directly on WhatsApp with your screenshot.",
   },
   {
-    title: "Naap share karein",
-    text: "Measurement guide dekh kar naap bhejein ya fitting appointment poochhein.",
+    title: "Share measurements",
+    text: "Send your measurements using our guide or ask for a fitting appointment.",
   },
   {
-    title: "Details confirm",
-    text: "Designer aapse fabric, delivery date aur design detailing confirm karegi.",
+    title: "Confirm details",
+    text: "The designer will confirm fabric, delivery timeline, and final styling details with you.",
   },
 ];

@@ -45,7 +45,7 @@ export function Header() {
           </Link>
           <button
             type="button"
-            aria-label={open ? "Menu band karein" : "Menu kholein"}
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
             className="grid h-11 w-11 place-items-center rounded-md text-foreground"
@@ -127,10 +127,10 @@ export function Footer() {
 export function FloatingWhatsApp() {
   return (
     <a
-      href={whatsappLink("Namaste Mohini Creation, mujhe ek outfit ke baare mein poochhna hai.")}
+      href={whatsappLink("Hello Mohini Creation, I would like to enquire about a custom outfit.")}
       target="_blank"
       rel="noreferrer"
-      aria-label="WhatsApp par message karein"
+      aria-label="Message on WhatsApp"
       className="fixed right-4 bottom-4 z-30 grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-elegant transition-transform hover:scale-105"
     >
       <MessageCircle className="h-6 w-6" />
@@ -193,7 +193,7 @@ export function VideoSlot({
         playsInline
         preload="metadata"
       >
-        Video load nahi ho paaya. <a href={igHref}>Instagram par dekhein</a>.
+        Unable to load video. <a href={igHref}>Watch on Instagram</a>.
       </video>
     );
   }
@@ -210,7 +210,7 @@ export function VideoSlot({
         </span>
         <p className="mt-2 font-display text-2xl leading-tight">{label}</p>
         <p className="mt-1 text-xs text-background/80">
-          Latest stitching reels aur measurement clips @{site.instagramHandle} par dekhein.
+          Watch our latest stitching reels and measurement clips on @{site.instagramHandle}.
         </p>
         <a
           href={igHref}
@@ -219,7 +219,7 @@ export function VideoSlot({
           className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-background px-4 py-2 text-xs font-medium text-foreground transition-opacity hover:opacity-90"
         >
           <Instagram className="h-3.5 w-3.5" />
-          Instagram Reels dekhein
+          Watch Instagram Reels
           <ExternalLink className="h-3 w-3 opacity-70" />
         </a>
       </div>

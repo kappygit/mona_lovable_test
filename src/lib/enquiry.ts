@@ -13,25 +13,25 @@ export type Enquiry = {
 
 export function validateEnquiry(e: Enquiry) {
   const err: Partial<Record<keyof Enquiry, string>> = {};
-  if (!e.name.trim()) err.name = "Kripya apna naam likhein.";
+  if (!e.name.trim()) err.name = "Please enter your name.";
   const digits = e.phone.replace(/[\s\-()+]/g, "");
-  if (!digits) err.phone = "Kripya WhatsApp/mobile number likhein.";
+  if (!digits) err.phone = "Please enter your WhatsApp or mobile number.";
   else if (!/^(91)?[6-9]\d{9}$/.test(digits))
-    err.phone = "Sahi 10-digit mobile number likhein (jaise 98765 43210).";
-  if (!e.service) err.service = "Kripya service ya outfit type chunein.";
-  if (!e.consent) err.consent = "Aage badhne ke liye consent zaroori hai.";
+    err.phone = "Please enter a valid 10-digit mobile number (e.g. 98765 43210).";
+  if (!e.service) err.service = "Please choose a service or outfit type.";
+  if (!e.consent) err.consent = "Consent is required to proceed.";
   return err;
 }
 
 export function enquiryMessage(e: Enquiry) {
   const lines = [
-    "Namaste Mohini Creation, nayi enquiry:",
-    `Naam: ${e.name}`,
-    `Number: ${e.phone}`,
+    "Hello Mohini Creation, new enquiry:",
+    `Name: ${e.name}`,
+    `Phone: ${e.phone}`,
     `Service: ${e.service}`,
     e.design && `Design: ${e.design}`,
     e.occasion && `Occasion: ${e.occasion}`,
-    e.date && `Kab tak chahiye: ${e.date}`,
+    e.date && `Needed by: ${e.date}`,
     e.fabric && `Fabric: ${e.fabric}`,
     e.measurements && `Measurements: ${e.measurements}`,
     e.notes && `Notes: ${e.notes}`,

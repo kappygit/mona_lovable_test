@@ -17,10 +17,11 @@ export const Route = createFileRoute("/enquiry")({
       { title: "Order Enquiry — Mohini Creation" },
       {
         name: "description",
-        content: "Custom stitching enquiry bhejein — Mohini Creation aapse details confirm karegi.",
+        content:
+          "Send a custom stitching enquiry — Mohini Creation will follow up with you to confirm details.",
       },
       { property: "og:title", content: "Order Enquiry — Mohini Creation" },
-      { property: "og:description", content: "Custom stitching enquiry bhejein." },
+      { property: "og:description", content: "Send a custom stitching enquiry." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -28,8 +29,8 @@ export const Route = createFileRoute("/enquiry")({
   component: EnquiryPage,
 });
 
-const fabricOpts = ["Mere paas fabric hai", "Fabric chahiye", "Abhi decide nahi kiya"];
-const measureOpts = ["Mere paas hain", "Appointment chahiye", "Baad mein share karungi"];
+const fabricOpts = ["I have my own fabric", "Need fabric sourcing", "Not decided yet"];
+const measureOpts = ["I have my measurements", "Need a fitting appointment", "Will share later"];
 
 function EnquiryPage() {
   const search = Route.useSearch();
@@ -70,18 +71,18 @@ function EnquiryPage() {
   if (sentLink)
     return (
       <div className="mx-auto max-w-xl px-4 py-20 text-center">
-        <p className="eyebrow">Shukriya</p>
+        <p className="eyebrow">Thank you</p>
         <h1 className="mt-3 font-display text-4xl">
-          Aapki enquiry mil gayi. Mohini Creation aapse details confirm karne ke liye contact
-          karegi.
+          Your enquiry is ready. Mohini Creation will contact you to confirm the details.
         </h1>
         <p className="mt-4 text-muted-foreground">
-          Agar WhatsApp nahi khula, neeche button se message bhejein — enquiry tabhi pahunchti hai
-          jab WhatsApp message send ho. Order designer ke confirm karne par hi pakka hota hai.
+          If WhatsApp did not open automatically, tap the button below to send your message —
+          enquiries are only received once sent on WhatsApp. Orders are finalized after confirmation
+          from the designer.
         </p>
         <a href={sentLink} target="_blank" rel="noreferrer" className="btn-primary mt-6">
           <MessageCircle className="h-4 w-4" />
-          WhatsApp par bhejein
+          Send on WhatsApp
         </a>
       </div>
     );
@@ -98,13 +99,13 @@ function EnquiryPage() {
     <>
       <PageHeader
         eyebrow="Order Enquiry"
-        title="Apni enquiry bhejein"
-        text="Form bharne par aapki details WhatsApp message mein tayaar ho jaayengi — bas Send dabayein."
+        title="Send your enquiry"
+        text="Filling this form prepares your details in a WhatsApp message — just tap Send."
       />
       <form onSubmit={submit} noValidate className="mx-auto grid max-w-2xl gap-5 px-4">
         <div>
           <label htmlFor="f-name" className={label}>
-            Naam *
+            Name *
           </label>
           <input
             id="f-name"
@@ -143,7 +144,7 @@ function EnquiryPage() {
             onChange={(e) => set("service", e.target.value)}
             aria-invalid={!!errors.service}
           >
-            <option value="">Chunein…</option>
+            <option value="">Choose…</option>
             {serviceNames.map((s) => (
               <option key={s}>{s}</option>
             ))}
@@ -175,7 +176,7 @@ function EnquiryPage() {
           </div>
           <div>
             <label htmlFor="f-date" className={label}>
-              Kab tak chahiye
+              Needed by
             </label>
             <input
               id="f-date"
@@ -235,12 +236,12 @@ function EnquiryPage() {
               checked={f.consent}
               onChange={(e) => set("consent", e.target.checked)}
             />
-            Meri di hui details par order ke baare mein contact kiya ja sakta hai.
+            I agree to be contacted regarding my order using these details.
           </label>
           <Err k="consent" />
         </div>
         <button type="submit" disabled={busy} className="btn-primary w-full sm:w-auto">
-          {busy ? "Bhej rahe hain…" : "WhatsApp par enquiry bhejein"}
+          {busy ? "Preparing…" : "Send enquiry on WhatsApp"}
         </button>
       </form>
     </>

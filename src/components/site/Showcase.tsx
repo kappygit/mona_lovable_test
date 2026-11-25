@@ -86,7 +86,7 @@ export function GalleryCard({
       type="button"
       onClick={onSelect}
       className="group flex flex-col text-left focus-visible:outline-none"
-      aria-label={`${item.title} bada dekhein`}
+      aria-label={`${item.title} — view larger`}
     >
       <div className="relative w-full overflow-hidden rounded-xl bg-muted shadow-card">
         <img
@@ -171,7 +171,7 @@ export function GalleryLightbox({
           type="button"
           autoFocus
           onClick={onClose}
-          aria-label="Band karein"
+          aria-label="Close"
           className="grid h-11 w-11 shrink-0 place-items-center rounded-full hover:bg-background/10"
         >
           <X className="h-5 w-5" />
@@ -196,7 +196,7 @@ export function GalleryLightbox({
               playsInline
               className="max-h-full max-w-full rounded-xl"
             >
-              Video load nahi ho paaya.
+              Unable to load video.
             </video>
           )
         ) : (
@@ -211,7 +211,7 @@ export function GalleryLightbox({
             <button
               type="button"
               onClick={() => onChangeIndex((index - 1 + items.length) % items.length)}
-              aria-label="Pichhla"
+              aria-label="Previous"
               className="absolute left-2 grid h-11 w-11 place-items-center rounded-full bg-background/15 text-background transition-colors hover:bg-background/25 md:left-4"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -219,7 +219,7 @@ export function GalleryLightbox({
             <button
               type="button"
               onClick={() => onChangeIndex((index + 1) % items.length)}
-              aria-label="Agla"
+              aria-label="Next"
               className="absolute right-2 grid h-11 w-11 place-items-center rounded-full bg-background/15 text-background transition-colors hover:bg-background/25 md:right-4"
             >
               <ChevronRight className="h-5 w-5" />
@@ -249,7 +249,7 @@ export function GalleryLightbox({
             onClick={onClose}
             className="btn-primary"
           >
-            Is design ke baare mein poochhein
+            Enquire about this design
           </Link>
           <a
             href={igTarget}
@@ -258,7 +258,7 @@ export function GalleryLightbox({
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-background/40 px-5 text-sm font-medium text-background transition-colors hover:bg-background/10"
           >
             <Instagram className="h-4 w-4" />
-            {cur.instagramUrl ? "Instagram post dekhein" : `@${site.instagramHandle} par dekhein`}
+            {cur.instagramUrl ? "View Instagram post" : `View on @${site.instagramHandle}`}
             <ExternalLink className="h-3.5 w-3.5 opacity-75" />
           </a>
         </div>
