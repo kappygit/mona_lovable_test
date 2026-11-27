@@ -1,4 +1,6 @@
 // All editable business content lives here. Change once, updates everywhere.
+import type { VideoCarouselItem } from "@/components/site/VideoCarousel3D";
+
 const lookbook = {
   hero: "/lookbook/hero.jpg",
   suit: "/lookbook/suit.jpg",
@@ -35,6 +37,12 @@ export const site = {
   measurementVideo: "",
   featuredReel: "",
 };
+
+export const videos: VideoCarouselItem[] = [
+  { id: "video-1", src: "/videos/video-1.mp4" },
+  { id: "video-2", src: "/videos/video-2.mp4" },
+  { id: "video-3", src: "/videos/video-3.mp4" },
+];
 
 export const whatsappLink = (text?: string) =>
   `https://wa.me/${site.whatsappNumber}${text ? `?text=${encodeURIComponent(text)}` : ""}`;

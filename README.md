@@ -36,3 +36,4 @@ All business content is in `src/content/site.ts`:
 - **Gallery**: the `gallery` array — each item has type (image/video), src, title, category, description, featured.
 - **Services, measurement list, order steps**: `services`, `measurements`, `orderSteps`.
 - **Videos**: set `site.featuredReel` and `site.measurementVideo` to a video URL.
+- **Homepage 3D carousel**: add MP4s and optional poster JPGs to `public/videos/`, then edit the `videos` array in `src/content/site.ts`. Each item has an `id`, `src`, and optional `poster` and `title`. The carousel component is reusable as `<VideoCarousel3D videos={videos} />`.

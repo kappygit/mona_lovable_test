@@ -1,9 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowRight, ExternalLink, Instagram, MessageCircle } from "lucide-react";
-import { categories, gallery, orderSteps, services, site, whatsappLink } from "@/content/site";
+import {
+  categories,
+  gallery,
+  orderSteps,
+  services,
+  site,
+  videos,
+  whatsappLink,
+} from "@/content/site";
 import { VideoSlot } from "@/components/site/Layout";
 import { GalleryCard, GalleryLightbox, HeroAutoplayVideo } from "@/components/site/Showcase";
+import { VideoCarousel3D } from "@/components/site/VideoCarousel3D";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -118,6 +127,16 @@ function Home() {
           />
           <HeroAutoplayVideo src={site.heroVideo} poster={site.images.heroVideoPoster} />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pt-20">
+        <div className="mb-6 text-center">
+          <h2 className="font-display text-3xl font-semibold md:text-4xl">Video highlights</h2>
+          <p className="mt-2 text-sm text-muted-foreground md:text-base">
+            Add a short introduction to your videos here.
+          </p>
+        </div>
+        <VideoCarousel3D videos={videos} />
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pt-20">

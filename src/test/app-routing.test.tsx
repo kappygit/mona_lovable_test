@@ -4,7 +4,7 @@ import { QueryClient } from "@tanstack/react-query";
 import { createRouter, rootRouteId } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
-import { gallery, instagramEmbedUrl, services, site } from "@/content/site";
+import { gallery, instagramEmbedUrl, services, site, videos } from "@/content/site";
 import { routeTree } from "@/routeTree.gen";
 
 // Match routes without running loaders or rendering: loaders may need a server or
@@ -35,6 +35,7 @@ describe("Instagram showcase content", () => {
       ...Object.values(site.images),
       ...gallery.map((g) => g.src),
       ...services.flatMap((s) => (s.image ? [s.image] : [])),
+      ...videos.flatMap((video) => [video.src, ...(video.poster ? [video.poster] : [])]),
     ];
 
     for (const rel of paths) {
