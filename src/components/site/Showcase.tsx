@@ -85,7 +85,7 @@ export function GalleryCard({
     <button
       type="button"
       onClick={onSelect}
-      className="group flex flex-col text-left focus-visible:outline-none"
+      className="group flex w-full flex-col text-left focus-visible:outline-none"
       aria-label={`${item.title} — view larger`}
     >
       <div className="relative w-full overflow-hidden rounded-xl bg-muted shadow-card">
@@ -94,7 +94,8 @@ export function GalleryCard({
           alt={item.title}
           width={item.width}
           height={item.height}
-          loading={priority ? "eager" : "lazy"}
+          loading="lazy"
+          decoding="async"
           className="aspect-[3/4] w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
         {isReel && (

@@ -11,6 +11,7 @@ import {
   whatsappLink,
 } from "@/content/site";
 import { VideoSlot } from "@/components/site/Layout";
+import { Reveal } from "@/components/site/Reveal";
 import { GalleryCard, GalleryLightbox, HeroAutoplayVideo } from "@/components/site/Showcase";
 import { VideoCarousel3D } from "@/components/site/VideoCarousel3D";
 
@@ -139,34 +140,44 @@ function Home() {
         <VideoCarousel3D videos={videos} />
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pt-20">
+      <section className="mx-auto max-w-6xl overflow-x-clip px-4 pt-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-3xl font-semibold md:text-4xl">Featured lookbook</h2>
-            <p className="mt-1.5 text-sm text-muted-foreground">
-              Signature studio pieces — tap any outfit to inspect closely.
-            </p>
-          </div>
-          <Link
-            to="/gallery"
-            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
-          >
-            View all
-          </Link>
+          <Reveal direction="up">
+            <div>
+              <h2 className="font-display text-3xl font-semibold md:text-4xl">Featured lookbook</h2>
+              <p className="mt-1.5 text-sm text-muted-foreground">
+                Signature studio pieces — tap any outfit to inspect closely.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal direction="up">
+            <Link
+              to="/gallery"
+              className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              View all
+            </Link>
+          </Reveal>
         </div>
         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
           {featuredDashboard.map((g, idx) => (
-            <GalleryCard
+            <Reveal
               key={g.id}
-              item={g}
-              onSelect={() => openLightbox(featuredDashboard, idx)}
-              priority
-            />
+              direction={idx % 2 === 0 ? "left" : "right"}
+              delay={(Math.floor(idx / 2) % 4) * 0.08}
+              className="w-full"
+            >
+              <GalleryCard
+                item={g}
+                onSelect={() => openLightbox(featuredDashboard, idx)}
+                priority
+              />
+            </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="mt-20 bg-secondary py-14 md:py-18">
+      <section className="mt-20 overflow-x-clip bg-secondary py-14 md:py-18">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -221,33 +232,45 @@ function Home() {
 
           <div className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {visibleInstagram.map((item, idx) => (
-              <GalleryCard
-                key={item.id}
-                item={item}
-                onSelect={() => openLightbox(visibleInstagram, idx)}
-                priority={idx < 4}
-              />
+              <Reveal
+                key={igTab + item.id}
+                direction={idx % 2 === 0 ? "left" : "right"}
+                delay={(Math.floor(idx / 2) % 4) * 0.08}
+                className="w-full"
+              >
+                <GalleryCard
+                  item={item}
+                  onSelect={() => openLightbox(visibleInstagram, idx)}
+                  priority={idx < 4}
+                />
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pt-20">
+      <section className="mx-auto max-w-6xl overflow-x-clip px-4 pt-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-3xl font-semibold md:text-4xl">Browse by category</h2>
-            <p className="mt-1.5 text-sm text-muted-foreground">
-              Explore both studio lookbook and Instagram creations together.
-            </p>
-          </div>
-          <Link
-            to="/gallery"
-            search={activeCategory === "All" ? {} : { category: activeCategory }}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
-          >
-            Full gallery ({gallery.length})
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <Reveal direction="up">
+            <div>
+              <h2 className="font-display text-3xl font-semibold md:text-4xl">
+                Browse by category
+              </h2>
+              <p className="mt-1.5 text-sm text-muted-foreground">
+                Explore both studio lookbook and Instagram creations together.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal direction="up">
+            <Link
+              to="/gallery"
+              search={activeCategory === "All" ? {} : { category: activeCategory }}
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Full gallery ({gallery.length})
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
         </div>
 
         <div
@@ -284,64 +307,75 @@ function Home() {
 
         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
           {categoryItems.map((item, idx) => (
-            <GalleryCard
-              key={item.id}
-              item={item}
-              onSelect={() => openLightbox(categoryItems, idx)}
-            />
+            <Reveal
+              key={activeCategory + item.id}
+              direction={idx % 2 === 0 ? "left" : "right"}
+              delay={(Math.floor(idx / 2) % 4) * 0.08}
+              className="w-full"
+            >
+              <GalleryCard item={item} onSelect={() => openLightbox(categoryItems, idx)} />
+            </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pt-20">
+      <section className="mx-auto max-w-6xl overflow-x-clip px-4 pt-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 className="font-display text-3xl font-semibold md:text-4xl">Services</h2>
-          <Link
-            to="/services"
-            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
-          >
-            All services
-          </Link>
+          <Reveal direction="up">
+            <h2 className="font-display text-3xl font-semibold md:text-4xl">Services</h2>
+          </Reveal>
+          <Reveal direction="up">
+            <Link
+              to="/services"
+              className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              All services
+            </Link>
+          </Reveal>
         </div>
         <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <article
+          {services.map((s, idx) => (
+            <Reveal
               key={s.name}
-              className="overflow-hidden rounded-xl border border-border bg-card"
+              direction={idx % 2 === 0 ? "left" : "right"}
+              className="h-full w-full"
             >
-              {s.image && (
-                <img
-                  src={s.image}
-                  alt={s.name}
-                  loading="lazy"
-                  className="aspect-[16/10] w-full object-cover object-top"
-                />
-              )}
-              <div className="p-5">
-                <h3 className="font-display text-2xl font-semibold">{s.name}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                  {s.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <Link
-                    to="/enquiry"
-                    search={{ service: s.name }}
-                    className="text-sm font-medium text-primary hover:underline"
-                  >
-                    Enquire now
-                  </Link>
-                  {s.category && (
+              <article className="h-full overflow-hidden rounded-xl border border-border bg-card">
+                {s.image && (
+                  <img
+                    src={s.image}
+                    alt={s.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[16/10] w-full object-cover object-top"
+                  />
+                )}
+                <div className="p-5">
+                  <h3 className="font-display text-2xl font-semibold">{s.name}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {s.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
                     <Link
-                      to="/gallery"
-                      search={{ category: s.category }}
-                      className="text-sm text-muted-foreground hover:text-foreground"
+                      to="/enquiry"
+                      search={{ service: s.name }}
+                      className="text-sm font-medium text-primary hover:underline"
                     >
-                      View {s.category}
+                      Enquire now
                     </Link>
-                  )}
+                    {s.category && (
+                      <Link
+                        to="/gallery"
+                        search={{ category: s.category }}
+                        className="text-sm text-muted-foreground hover:text-foreground"
+                      >
+                        View {s.category}
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
