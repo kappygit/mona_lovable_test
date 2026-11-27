@@ -189,13 +189,16 @@
     scroll-behavior: smooth;
     scrollbar-color: color-mix(in oklab, var(--primary) 35%, var(--border)) var(--background);
     scrollbar-width: thin;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    overflow-x: hidden;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
     text-rendering: optimizeLegibility;
   }
 

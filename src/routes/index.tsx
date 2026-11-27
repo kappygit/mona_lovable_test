@@ -64,7 +64,7 @@ function Home() {
   return (
     <>
       <section className="mx-auto grid max-w-6xl gap-8 px-4 pt-6 md:grid-cols-2 md:items-start md:pt-12">
-        <div className="order-2 md:sticky md:top-24 md:order-1 md:py-10">
+        <div className="order-2 min-w-0 md:sticky md:top-24 md:order-1 md:py-10">
           <a
             href={site.instagramUrl}
             target="_blank"
@@ -117,7 +117,7 @@ function Home() {
             </div>
           </dl>
         </div>
-        <div className="order-1 flex flex-col gap-8 md:order-2">
+        <div className="order-1 flex min-w-0 flex-col gap-8 md:order-2">
           <img
             src={site.images.hero}
             alt="Rose anarkali suit — signature design"

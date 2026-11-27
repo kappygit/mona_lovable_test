@@ -137,7 +137,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Header />
-      <main>
+      <main className="overflow-x-clip">
         <Outlet />
       </main>
       <Footer />
