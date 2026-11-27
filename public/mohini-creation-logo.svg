@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 130" width="440" height="130" role="img" aria-label="Mohini Creation">
+  <style>
+    .brand{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-weight:600}
+    .tag{font-family:'Jost','Helvetica Neue',Arial,sans-serif;font-weight:500}
+  </style>
+  <!-- Emblem: arch (jharokha) + M monogram -->
+  <g transform="translate(12,8)">
+    <path d="M6 110 V50 A44 44 0 0 1 94 50 V110 Z" fill="none" stroke="#B8924A" stroke-width="1.6"/>
+    <path d="M13 106 V51 A37 37 0 0 1 87 51 V106 Z" fill="#8B2742"/>
+    <polygon points="50,20 54,27 50,34 46,27" fill="#E3C27A"/>
+    <path d="M32 84 V50 L50 74 L68 50 V84" fill="none" stroke="#FBF5EC" stroke-width="5" stroke-linejoin="miter" stroke-linecap="butt"/>
+    <path d="M28 92 H72" stroke="#E3C27A" stroke-width="1.4"/>
+    <circle cx="50" cy="98" r="1.8" fill="#E3C27A"/>
+  </g>
+  <!-- Wordmark -->
+  <text class="brand" x="128" y="72" font-size="58" fill="#8B2742">Mohini</text>
+  <line x1="130" y1="86" x2="418" y2="86" stroke="#B8924A" stroke-width="1"/>
+  <text class="tag" x="131" y="108" font-size="15" letter-spacing="9.5" fill="#B8924A">CREATION</text>
+</svg>

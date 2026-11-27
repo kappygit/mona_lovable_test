@@ -29,9 +29,11 @@ describe("App routing", () => {
 });
 
 describe("Instagram showcase content", () => {
-  it("resolves every local image referenced in site.ts to an existing file in public/", () => {
+  it("resolves every local image referenced in site.ts and logo SVGs in public/", () => {
     const publicDir = path.resolve(process.cwd(), "public");
     const paths = [
+      "/mohini-creation-logo.svg",
+      "/mohini-creation-icon.svg",
       ...Object.values(site.images),
       ...gallery.map((g) => g.src),
       ...services.flatMap((s) => (s.image ? [s.image] : [])),
